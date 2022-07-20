@@ -1,0 +1,52 @@
+{
+  "name": "pokeapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "export APP_ENV=test && jest --coverage",
+    "start:dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "nock": "^13.2.9"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "jest": "^28.1.3"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "test",
+      "expect",
+      "beforeAll",
+      "afterAll",
+      "jest",
+      "beforeEach"
+    ]
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "node"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/build"
+    ],
+    "testMatch": [
+      "**/?(*.)+(spec|test).js"
+    ],
+    "transformIgnorePatterns": [],
+    "testEnvironment": "node"
+  }
+}
