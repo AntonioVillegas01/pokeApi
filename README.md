@@ -23,26 +23,13 @@ The entire application is contained within the `index.js` file.
 
 The REST API Middleware to the example app is described below.
 
-## Get list of Things
+## Get list of All Pokemons
 
 ### Request
 
 `GET /`
 
-curl --location --request GET 'http://localhost:3000/api/pokemon'
-
-### Response
-
-`GET /`
-
-
-## Create a new Thing
-
-### Request
-
-`POST /thing/`
-
-    curl -i -H 'Accept: application/json' -d 'name=Foo&status=new' http://localhost:7000/thing
+curl --location --request GET 'https://poke-api-test-marco-garcia.herokuapp.com/api/pokemon'
 
 ### Response
 
@@ -71,13 +58,14 @@ curl --location --request GET 'http://localhost:3000/api/pokemon'
 }
 ```
 
+
 ## Query By Name
 
 ### Request
 
 `GET /search/{pokemonNAme}`
 
-    curl --location --request GET 'http://localhost:3000/api/search/mew'
+curl --location --request GET 'https://poke-api-test-marco-garcia.herokuapp.com/api/search/{pokemonName}'
 
 ### Response
 
