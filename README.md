@@ -8,6 +8,9 @@ The entire application is contained within the `index.js` file.
 
 `npm run test` runs a simplistic test of the diferents routes of the app using the jest framework
 
+![Captura de Pantalla 2022-07-19 a la(s) 22 11 36](https://user-images.githubusercontent.com/24302401/179888115-0a9a6f0f-464a-489c-9229-0e96896189d1.png)
+
+
 ## Run the app in dev mode
 
     npm run start:dev
