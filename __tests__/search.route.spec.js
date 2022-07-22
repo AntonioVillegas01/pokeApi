@@ -13,7 +13,7 @@ describe('testing search route',  ()  => {
 
 
     const nockBaseURL  = nock(baseURL)
-    const query = '/mew'
+    const query = 'mew'
     const apiResponse = nockBaseURL.get(query)
         .reply(
             200,
@@ -26,6 +26,8 @@ describe('testing search route',  ()  => {
     // Happy Path
     test('Should return query', (done) => {
         expect(body.ok).toBeTruthy()
+        expect(body.total).toEqual(4)
+        expect(body.result[0].name).toBe('mewtwo')
         done()
     }, timeout)
 
