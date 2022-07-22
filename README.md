@@ -52,7 +52,8 @@ curl --location --request GET 'https://poke-api-test-marco-garcia.herokuapp.com/
             {
                 "name": "venusaur",
                 "url": "https://pokeapi.co/api/v2/pokemon/3/"
-            }...
+            },
+          ...
         ]
     }
 }
@@ -63,27 +64,35 @@ curl --location --request GET 'https://poke-api-test-marco-garcia.herokuapp.com/
 
 ### Request
 
-`GET /search/{pokemonNAme}`
+`GET /search?searchTerm={searchTerm}`
 
-curl --location --request GET 'https://poke-api-test-marco-garcia.herokuapp.com/api/search/{pokemonName}'
+curl --location --request GET 'https://poke-api-test-marco-garcia.herokuapp.com/api/search?searchTerm={searchTerm}'
 
 ### Response
 
 ```
 {
     "ok": true,
-    "result": {
-        "abilities": [
-            {
-                "ability": {
-                    "name": "synchronize",
-                    "url": "https://pokeapi.co/api/v2/ability/28/"
-                },
-                "is_hidden": false,
-                "slot": 1
-            }
-        ],
-        ...
+    "total": 4,
+    "result": [
+        {
+            "name": "mewtwo",
+            "url": "https://pokeapi.co/api/v2/pokemon/150/"
+        },
+        {
+            "name": "mew",
+            "url": "https://pokeapi.co/api/v2/pokemon/151/"
+        },
+        {
+            "name": "mewtwo-mega-x",
+            "url": "https://pokeapi.co/api/v2/pokemon/10043/"
+        },
+        {
+            "name": "mewtwo-mega-y",
+            "url": "https://pokeapi.co/api/v2/pokemon/10044/"
+        }
+    ]
 }
+
 ```
 
